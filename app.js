@@ -21,9 +21,10 @@ app.post('/predict', async (req, res) => {
         error: err.response.data.message || err.response.data.error || 'Upstream data validation mismatch.'
       });
     }
+    
     res.status(500).json({ 
       status: 'error',
-      error: 'Core ML Matrix Server structural timeout. Verify your python app.py is running on port 5000.' 
+      error: 'Core ML Matrix Server structural timeout. Verify your python app.py is runing on port 5000.' 
     });
   }
 });
